@@ -1,0 +1,79 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "logo logo vert-nav"
+    "horz-nav horz-nav horz-nav"
+    "main main main"
+    "footer footer footer";
+
+  background-color: rgb(142, 151, 58);
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.vertical {
+  grid-area: vert-nav;
+  background-color: lightblue;
+  padding: 10px;
+}
+
+.vertical ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style-type: none;
+}
+
+.horizontal {
+  grid-area: horz-nav;
+  background-color: rgb(28, 28, 92);
+}
+
+.horizontal ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.horizontal ul li {
+  padding: 15px;
+}
+
+.row a,
+.vertical ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  grid-area: main;
+  background-color: rgb(253, 253, 165);
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  background-color: rgb(28, 28, 92);
+  color: white;
+  padding: 10px;
+  grid-area: footer;
+}
+
+#logo {
+  grid-area: logo;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
